@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="8Ng-1I-Gvm">
-                                <rect key="frame" x="129" y="284" width="135.33333333333337" height="284.33333333333326"/>
+                                <rect key="frame" x="129" y="249.33333333333334" width="135.33333333333337" height="353.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLE-Lv-O8Z">
                                         <rect key="frame" x="10.33333333333335" y="0.0" width="114.66666666666669" height="34.333333333333336"/>
@@ -28,7 +28,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NM-hc-uMQ">
-                                        <rect key="frame" x="0.0" y="83.333333333333314" width="135.33333333333334" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="83.333333333333343" width="135.33333333333334" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Segue Present"/>
                                         <connections>
@@ -36,7 +36,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-3Z-7sF">
-                                        <rect key="frame" x="12.666666666666657" y="166.66666666666669" width="110" height="34.333333333333343"/>
+                                        <rect key="frame" x="12.666666666666657" y="166.66666666666666" width="110" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="코드로 push"/>
                                         <connections>
@@ -44,13 +44,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfu-cN-G2a">
-                                        <rect key="frame" x="2.3333333333333428" y="250.00000000000003" width="130.66666666666666" height="34.333333333333343"/>
+                                        <rect key="frame" x="2.3333333333333428" y="249.99999999999997" width="130.66666666666666" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="코드로 present"/>
                                         <connections>
                                             <action selector="tapCodePresentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emC-bi-m3h"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98u-Ve-kjo">
+                                        <rect key="frame" x="47" y="333.33333333333326" width="41.333333333333343" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -62,6 +68,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cVi-Jq-rdp"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="98u-Ve-kjo" id="1oO-Me-dET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,11 +123,21 @@
                                     <constraint firstItem="SMN-cC-Auf" firstAttribute="centerX" secondItem="uZC-UV-1UX" secondAttribute="centerX" id="NCp-uj-Vw4"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dln-Em-qat">
+                                <rect key="frame" x="175" y="338" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="90i-sD-nHF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ep9-Nc-va3"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="dln-Em-qat" id="qTC-xu-hAx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mct-zf-Hkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,6 +210,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv6-7j-RkC">
+                                <rect key="frame" x="144" y="261" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H2T-aw-uqY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -199,6 +225,9 @@
                             <constraint firstItem="2vu-tC-rHI" firstAttribute="centerY" secondItem="qim-Zx-bwB" secondAttribute="centerY" id="CVG-RN-D5D"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="mv6-7j-RkC" id="mBR-as-VqD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEG-QJ-fCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,6 +260,13 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAL-Wr-3PA">
+                                <rect key="frame" x="247" y="261" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R6J-Nf-KvH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -239,10 +275,13 @@
                             <constraint firstItem="DB7-9T-SC2" firstAttribute="centerX" secondItem="Bf6-Kz-8vD" secondAttribute="centerX" id="rFY-u6-y7V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="HAL-Wr-3PA" id="EYs-LY-Hag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ct-LE-dJ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1011.4503816793892" y="668.30985915492965"/>
+            <point key="canvasLocation" x="-686" y="672"/>
         </scene>
     </scenes>
     <resources>
